@@ -1,3 +1,5 @@
+#Ejercicio for
+
 #Variable para almacenar las palabras
 oficiales_lista = []
 lista_mensajes=[]
@@ -27,7 +29,32 @@ for i in range(len(oficiales_lista)):
     lista_mensajes.append(palabra)
     
 print(lista_mensajes)
-          
 
+#Ejercicio while
+
+#Declaro variables
+validador = True
+pares = 0
+impares = 0
+
+#Mientras validador True pide un numero mayor a 0, si numero es 0 validador se vuelve Falso y sale del bucle
+while validador==True:
+    num = int(input("Defina un numero, ponga 0 si quiere salir: "))
+    if num == 0 :
+        validador = False
+        continue
+    elif num<0:
+        print("Debe ingresar un numero mayor a 0")
+        continue
+    else:
+        if num%2==0:
+            pares+=1
+            continue
+        else:
+            impares+=1
+            continue
+        
+print(f"Los numeros pares son {pares}")
+print(f"Los numeros impares son {impares}")
 
 
