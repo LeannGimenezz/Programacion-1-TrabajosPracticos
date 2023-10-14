@@ -1,5 +1,5 @@
 #Declarando variabless
-user_name = input("Ingrese su nombre: ")
+user_name = input("Ingrese su nombre: ").title()
 var_out = 1
 user_number =1
 max_numers = 0
@@ -12,9 +12,10 @@ while(user_number != 0):
     user_number = int(input(f"Señxr: {user_name} | Ingrese un numero | si ingresa 0 termina la ejeucion: "))
 
     if(user_number == 1):
+        user_sum = 1
         #Mientras el numero sea distinto de 0
         while (user_sum != 0):
-            user_sum = int(input(f"Señxr: {user_name} | Ingrese el numero que desee sumar: "))
+            user_sum = int(input(f"Señxr: {user_name} | Ingrese el numero que desee Ingresar: "))
             if (user_sum%2 == 0):
                 #Si el numero es par ver cual es el mayor
                 if(max_numers<user_sum):
@@ -26,7 +27,10 @@ while(user_number != 0):
                     odd_numers +=user_sum
                     sum_number += 1
         print(f"Señxr: {user_name} | El numero par mas grande es el : {max_numers}")
-        print(f"Señxr: {user_name} | El promedio de los numeros impares es de: {odd_numers/sum_number}")
+        if(sum_number>0):
+            print(f"Señxr: {user_name} | El promedio de los numeros impares es de: {odd_numers/sum_number}")
+        else:
+            print(f"Señxr: {user_name} | No se ha ingresado ningun numero")
         
         
     elif(user_number == 2):
@@ -39,6 +43,8 @@ while(user_number != 0):
             if lett in vocals:
                 vocals[lett] += 1
                 vocal_numer +=1
+        print(f"Señxr: {user_name} | Su texto tiene {vocal_numer} vocales") 
     elif(user_number == 0):
         print(F"Señxr: {user_name} | ADIOSS")
-    print(f"Señxr: {user_name} | Su texto tiene {vocal_numer} vocales")        
+        
+    
